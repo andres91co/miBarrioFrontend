@@ -1,0 +1,18 @@
+<div [formGroup]="form">
+    <label for="{{fieldName}}">{{title}}</label>
+    <input type="{{type}}" class="form-control" name="{{fieldName}}" id="{{fieldName}}"
+        placeholder="{{placeholder}} {{mandatory ? '*': ''}}" [formControlName]="fieldName"
+        (keypress)="validateCharacter($event)">
+    <div class="custom-error" *ngIf="form.get(fieldName)?.hasError('required') && form.get(fieldName)?.touched">
+        The field is required
+    </div>
+    <div class="custom-error" *ngIf="form.get(fieldName)?.hasError('maxlength') && form.get(fieldName)?.touched">
+        The field must have maximum of {{ form.get(fieldName)?.errors?.['maxlength'].requiredLength}} character(s)
+    </div>
+    <div class="custom-error" *ngIf="form.get(fieldName)?.hasError('minlength') && form.get(fieldName)?.touched">
+        The field must have at least {{ form.get(fieldName)?.errors?.['minlength'].requiredLength}} character(s)
+    </div>
+    <div class="custom-error" *ngIf="form.get(fieldName)?.hasError('pattern') && form.get(fieldName)?.touched">
+        {{patternValidationText}}
+    </div>
+</div>

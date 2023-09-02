@@ -1,0 +1,19 @@
+<div class="row m-0">
+    <div class="col-3">
+        <div class="row pt-default filters-container">
+            <form [formGroup]="formulario">
+                <div class="col text-center">
+                    <app-text [form]="formulario" [fieldName]="'PRODUCTO'" [mandatory]="false" [title]="''"
+                        [placeholder]="'Búsqueda por producto'" [type]="'text'"></app-text>
+                </div>
+            </form> 
+        </div>
+    </div>
+    <div class="col row m-0">
+        <div class="row m-0 pt-default">
+            <div class="col-3  text-center pt-default" *ngFor="let product of products">
+                <app-product [product]="product"></app-product>
+            </div>
+        </div>
+    </div>
+</div>

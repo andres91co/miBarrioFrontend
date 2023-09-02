@@ -1,0 +1,18 @@
+<div class="row m-0 product-container">
+    <div class="col-12">
+        <img [src]="product.imagen" class="product-img" alt="">
+    </div>
+    <div class="col-12 pt-default product-text-title">
+        {{product.nombre_producto}}
+    </div>
+    <div class="col-12 product-text-desc">
+        {{product.descripcion}}
+    </div>
+    <div class="col-12 product-text-precio">
+        ${{product.precio}}
+    </div>
+    <div class="col-12 product-text-desc pt-product-button">
+        <button type="button" class="btn btn-labeled btn-primary">
+            <span class="btn-label"><i class="fa-solid fa-cart-plus"></i></span> Agregar</button>
+    </div>
+</div>

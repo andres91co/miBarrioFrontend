@@ -1,0 +1,81 @@
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+            <img src="../../../assets/images/slide1.jpg" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="../../../assets/images/slide2.jpg" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="row mt-default w-100 category-container">
+    <div class="col-8 offset-md-2">
+        <div class="row">
+            <div class="col-2" *ngFor="let item of [1,2,3,4,5,6]">
+                <div class="circle">
+                    <img src='../../../assets/images/category{{item}}.png' alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row top-products-container m-0">
+    <div class="row w-100">
+        <div class="col-6">
+            Top Productos Hoy
+            <button type="button" class="btn btn-labeled btn-primary">
+                <span class="btn-label">20% Descuento</span></button>
+        </div>
+        <div class="col-6 text-end">
+            <button type="button" class="btn btn-labeled btn-primary" (click)="goToProducts()">
+                <span class="btn-label">Ver Todos</span></button>
+        </div>
+    </div>
+    <div class="col-12 row m-0">
+        <div class="row m-0 pt-default">
+            <div class="col-3  text-center" *ngFor="let product of products">
+                <app-product [product]="product"></app-product>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row pt-default m-0">
+    <div class="col-12 p-0">
+        <img src="../../../assets/images/banner-home.png" class="banner-image" alt="">
+    </div>
+</div>
+
+
+<div class="row top-products-container m-0">
+    <div class="row w-100">
+        <div class="col-6">
+            Mejores Ofertas Hoy
+            <button type="button" class="btn btn-labeled btn-primary">
+                <span class="btn-label">20% Descuento</span></button>
+        </div>
+        <div class="col-6 text-end">
+            <button type="button" class="btn btn-labeled btn-primary" (click)="goToProducts()">
+                <span class="btn-label">Ver Todos</span></button>
+        </div>
+    </div>
+    <div class="col-12 row m-0">
+        <div class="row m-0 pt-default">
+            <div class="col-3  text-center" *ngFor="let product of offers">
+                <app-product [product]="product"></app-product>
+            </div>
+        </div>
+    </div>
+</div>

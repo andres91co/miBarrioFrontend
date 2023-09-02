@@ -1,0 +1,54 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import 'ngx-toastr/toastr';
+
+* {
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    90deg,
+    rgb(255 187 2) 0%,
+    rgb(251 149 43) 35%,
+    rgb(255 127 13) 60%
+  );
+  border: orange;
+  text-shadow: 0 0 2px #000;
+}
+
+.default-text {
+  color: white;
+  text-shadow: 0 0 2px #000;
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.mt-default {
+  margin-top: 20px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.m-0{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.p-0{
+    padding: 0;
+}
+
+.pt-default{
+    padding-top: 20px;
+}
+
+.md-toast.success {
+  background-color: white !important;
+  color: #000 !important;
+}

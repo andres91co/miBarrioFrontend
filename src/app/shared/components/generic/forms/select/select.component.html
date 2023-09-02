@@ -1,0 +1,7 @@
+<div [formGroup]="form">
+    <label for="{{fieldName}}">{{title}}{{mandatory ? '*': ''}}</label>
+    <ng-select [formControlName]="fieldName" [multiple]="multiple" (change)="onChange($event)">
+        <ng-option *ngFor="let item of list" [value]="item[value]"
+            [disabled]="item[disabled]" >{{item[name]}}</ng-option>
+    </ng-select>
+</div>

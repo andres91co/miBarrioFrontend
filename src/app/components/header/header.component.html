@@ -1,0 +1,66 @@
+<div class="sticky-container">
+    <div class="row header-container align-items-center">
+        <div class="col-3">
+            <img src="../../../assets/images/logo.png" alt="logo" class="logo">
+        </div>
+        <div class="col-6 mb-3">
+            <div class="row">
+                <div class="col-9">
+                    <app-text [form]="form" [fieldName]="'SEARCH'" [mandatory]="true" [title]="''"
+                        [placeholder]="'Busque productos en su ciudad'" [type]="'text'" [mandatory]="false"></app-text>
+                </div>
+                <div class="col-3 justify-btn">
+                    <button type="button" class="btn btn-labeled btn-primary">
+                        <span class="btn-label"><i class="fa-solid fa-magnifying-glass"></i></span> Buscar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 default-text bold">
+            <div class="row">
+                <div class="col text-end">
+                    <button type="button" class="btn btn-labeled btn-primary me-2" data-toggle="tooltip"
+                        data-placement="top" title="Carrito de Compras">
+                        <span class="btn-label"><i class="fa-solid fa-cart-shopping"></i></span></button>
+                    <button type="button" class="btn btn-labeled btn-primary" data-toggle="tooltip" data-placement="top"
+                        title="Login" (click)="goToLogin()">
+                        <span class="btn-label"><i class="fa-solid fa-right-to-bracket"></i>></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid align-items-center">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inventario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="goToProducts()">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ventas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Compras</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Gestionar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Proveedores</a></li>
+                            <li><a class="dropdown-item" href="#">Clientes</a></li>
+                            <li><a class="dropdown-item" href="#">Administradores</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

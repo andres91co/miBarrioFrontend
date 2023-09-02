@@ -1,0 +1,16 @@
+<div *ngIf="cargando && showMessage" class="content"  [ngStyle]="{ 'background-image': 'url(' + image + ')'}">
+    <div class="contentOpacity">
+        <div class="title ">
+            <span class="logoa movea">Mi Barrio</span><span class="logob"> Buenos Precios</span>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!cargando">
+    <app-header></app-header>
+    <router-outlet>
+    </router-outlet>
+    <app-footer></app-footer>
+</div>
+
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>

@@ -1,0 +1,26 @@
+<form [formGroup]="formulario">
+
+    <app-text [form]="formulario" [fieldName]="'NOMBRE'" [mandatory]="true" [title]="'Nombre'"
+        [placeholder]="'Digite su nombre'" [type]="'text'"></app-text>
+        
+    <app-text [form]="formulario" [fieldName]="'CELULAR'" [mandatory]="true" [title]="'Celular'"
+    [placeholder]="'Digite su celular'" [type]="'text'" [onlyNumber]="true"></app-text>
+
+    <app-text [form]="formulario" [fieldName]="'EMAIL'" [mandatory]="true" [title]="'Email'"
+        [placeholder]="'Digite su email'" [type]="'text'"
+        [patternValidationText]="'Please enter a valid email format'"></app-text>
+
+    <app-text [form]="formulario" [fieldName]="'PASS'" [mandatory]="true" [title]="'Email'"
+        [placeholder]="'Digite su password'" [type]="'password'"></app-text>
+
+    <app-date [form]="formulario" [fieldName]="'DATE'" [mandatory]="true" [title]="'Fecha'" [minDate]="'2022-01-01'"
+        (emitter)="change($event)"></app-date>
+
+
+    <app-select [form]="formulario" [fieldName]="'LISTA'" [list]="cars" [value]="'x'" [name]="'d'"
+        [title]="'Lista de Carros'" [mandatory]="true"></app-select>
+
+        <app-table></app-table>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid" (click)="guardar()">Submit</button>
+</form>

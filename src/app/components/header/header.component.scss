@@ -1,0 +1,22 @@
+
+
+.header-container{
+    height: 100px;
+    background: linear-gradient(90deg, rgba(26,222,57,1) 0%, rgba(70,190,131,1) 35%, rgba(0,255,152,1) 100%); 
+    margin: 0;
+}
+
+.logo{
+    height: 30px;
+    margin: 15px 0px 15px 30px;
+}
+
+.justify-btn{
+    margin-top: 20px;
+}
+
+.sticky-container{
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+}

@@ -1,0 +1,9 @@
+<div [formGroup]="form">
+    <label for="{{fieldName}}">{{title}}{{mandatory ? '*': ''}}</label>
+    <input type="date" class="form-control" min="{{minDate}}" max="{{maxDate}}"
+     name="{{fieldName}}" id="{{fieldName}}" [formControlName]="fieldName"
+    (change)="change()">
+    <div class="custom-error" *ngIf="form.get(fieldName)?.hasError('required') && form.get(fieldName)?.touched">
+        The field is required
+    </div>
+</div>

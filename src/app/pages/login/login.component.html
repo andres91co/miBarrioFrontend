@@ -1,0 +1,15 @@
+<form [formGroup]="formulario" class="form-container">
+    <div class="mt-default">
+        <app-text [form]="formulario" [fieldName]="'NOMBRE'" [mandatory]="true" [title]="'Nombre'"
+            [placeholder]="'Digite su nombre'" [type]="'text'" class="mt-default"></app-text>
+
+    </div>
+    <div class="mt-default">
+        <app-text [form]="formulario" [fieldName]="'PASS'" [mandatory]="true" [title]="'Email'"
+            [placeholder]="'Digite su password'" [type]="'password'" class="mt-default"></app-text>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-default" [disabled]="!formulario.valid"
+        (click)="logIn()">Submit</button>
+</form>

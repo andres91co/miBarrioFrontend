@@ -1,0 +1,16 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col" *ngFor="let header of headers">
+                {{header}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of dataList">
+            <td *ngFor="let field of fields">
+                {{getValue(data, field)}}
+            </td>
+        </tr>
+    </tbody>
+</table>

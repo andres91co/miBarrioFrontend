@@ -1,0 +1,33 @@
+.product-container{
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    padding: 15px;
+}
+
+.product-img {
+  height: auto;
+  width: 100%;
+}
+
+.product-text-title {
+  font-weight: bold;
+  color: #0cc5b7;
+  font-size: 18px;
+}
+
+.product-text-desc {
+  padding-top: 3px;
+  font-weight: bold;
+  color: rgb(121, 121, 121);
+  font-size: 14px;
+}
+
+.product-text-precio {
+  padding-top: 6px;
+  font-weight: bold;
+  color: black;
+  font-size: 16px;
+}
+
+.pt-product-button{
+    margin-top: 10px;
+}
